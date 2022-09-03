@@ -36,9 +36,9 @@ function generatePassword() {
 
   
   // these prompts give the user the option to choose what characters they want in their password
-  var chooseLower = confirm("Want to include Numbers in your password?");
-  var chooseUpper = confirm("Want to include Lower Case in your password?");
-  var chooseNum = confirm("Want to include Upper Case in your password?");
+  var chooseLower = confirm("Want to include Lower Case in your password?");
+  var chooseUpper = confirm("Want to include Upper Case in your password?");
+  var chooseNum = confirm("Want to include Numbers Case in your password?");
   var chooseSpecial = confirm("Want to include Special Characters in your password?");
   
   // if the user doesn't choose any characters for their password they will be alerted 
@@ -53,31 +53,37 @@ function generatePassword() {
   
   // what ever characters the user chooses will be pushed into this array
   var charChoice = [];
-  
+  var randomPassword = "";
     if (chooseLower === true) {
-      charChoice.push(lower)
+      charChoice = charChoice.concat(lower)
   }
     if (chooseUpper === true) {
-      charChoice.push(upper)
+      charChoice = charChoice.concat(upper)
     }
     if (chooseNum === true) {
-      charChoice.push(numeric)
+      charChoice = charChoice.concat(numeric)
     }
     if (chooseSpecial === true) {
-      charChoice.push(specialChar)
+      charChoice = charChoice.concat(specialChar)
     }
 
   // This loop randomizes the user's choice of characters and length
-
+    console.log(charChoice);
   for (var i = 0; i < passwordLength; i++) {
     
+    let randomIndex = Math.floor(Math.random()* charChoice.length);
+    console.log("randomIndex = " , randomIndex);
+    randomPassword += charChoice [randomIndex]; // === randomPassword = randomPassword + charChoice [randomIndex];
+    // console.log("randomPassword = ", randomPassword);  
+   }
+  return randomPassword;
 
-  }
 };
  
 // Write password to the #password input
 function writePassword() { 
-  var password = generatePassword();
+  var password = generatePassword(); 
+  console.log(password);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;

@@ -1,21 +1,10 @@
 # Password Generator Starter Code
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
+Do you need a new password?
 
-// I think need more practice with conacting and randomizng arrays before I am able to perform the steps below in a meaningful way. 
+1. Click the Generate Password button to generate a password.
 
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+2. Between 8 and 128 characters, choose the length of your desired password.
 
+3. Through the prompts, choose if you want Lower Case, Upper Case, Numbers, and/or Special Characters.
 
+4. After you have made all your choices through the prompts your new password will generate in the text box.
