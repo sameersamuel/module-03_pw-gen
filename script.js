@@ -16,7 +16,7 @@ function generatePassword() {
   var userPwLength = prompt("Between 8 and 128 characters, how long do you want your password?");
   var passwordLength = parseInt(userPwLength);
 
-  // if the user doesn't specify the length of characters in number this alerts them to USE A NUMER 
+  // if the user doesn't specify the length of characters in numberic characters this alerts them to USE A NUMER 
   if (isNaN(passwordLength)) {
     alert("Please give me a NUMBER.")
     return;
