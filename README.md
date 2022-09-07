@@ -26,4 +26,5 @@ Do you need a new password?
 
 
 
-GitHub Link: https://github.com/sameersamuel/module-03_pw-gen
+GitHub Link: https://github.com/sameersamuel/module-03_pw-gen.git
+Website Link: https://sameersamuel.github.io/module-03_pw-gen/
